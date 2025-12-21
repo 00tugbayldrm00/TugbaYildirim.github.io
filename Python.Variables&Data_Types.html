@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Python: Variables & Data Types</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload tutorial-page">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="page-wrapper">
+
+  				<!-- Header -->
+  					<header id="header" class="alt">
+   					 <a href="index.html" class="logo">
+      					<strong>Portfolio</strong> <span>by TUĞBA YILDIRIM</span>
+   					 </a>
+
+    			<!-- Menü buraya geldi -->
+    				<nav id="top-menu">
+      					<ul>
+        					<li><a href="index.html">Home</a></li>
+        					<li><a href="generic.html">About me</a></li>
+       				    	<li><a href="landing2.html">Projects</a></li>
+							<li><a href="tutorials.html">Tutorials</a></li>
+							<li><a href="#">Resume</a></li>
+							<li><a href="contact.html">Contact</a></li>
+      					</ul>
+    				</nav>
+  				</header>
+
+                <!-- Banner -->
+				<section id="banner" class="style2">
+                    <div class="inner">
+                        <span class="image">
+                            <img src="images/pic07.jpg" alt="" />
+                        </span>
+                        <header class="major">
+                            <h1>Python: Variables & Data Types</h1>
+							<h2>VARIABLES</h2>
+						</header>
+							<p>You can think of variables as containers that store data values. Any data you assign to a variable is carried and kept by that variable.</p>
+							<br><p><strong>Variable name = 'Data you want the variable to hold'</strong><br></p>
+							<img src="images/ekran 1.png" alt="Example Image"/>
+							<p>Note: Python automatically detects the type of data you assign to a variable.</p>
+							<img src="images/ekran 2.png" alt="Example Image"/>
+							<p>A variable can be overwritten; that is, after assigning a value to a variable, you can retrieve it using the print( ) command and modify the data. In this case, the print( ) output updates according to your changes. Moreover, if you write two variables with the same name but different values consecutively, Python accepts the last assigned value.</p>
+							<img src="images/ekran 3.png" alt="Example Image"/>
+							<div class="img-note">Note: Please pay attention to the order in the second example</div>
+							<p>You can create multiple variables simultaneously in Python. This can be done as follows:</p>
+							<br><p><strong>First variable name, second variable name = 'data to be stored in the first variable', 'data to be stored in the second variable'</strong></p><br>
+							<img src="images/ekran 4.png" alt="Example Image"/>
+							<p>Additionally, you can assign a single value to multiple variables.</p>
+							<br><p><strong>First variable name = second variable name = 'the data to be stored in both variables'</strong></p><br>
+							<img src="images/ekran 5.png" alt="Example Image"/>
+							<p>You can also assign multiple values to a variable.</p>
+							<br><p><strong>Variable name = ['First value', 'Second value']</strong></p><br>
+							<img src="images/ekran 6.png" alt="Example Image"/>
+							<p>In addition, you can create two different variables and allow them to store the values of the variable you created. For example:</p>
+							<br><p><strong>First variable name, second variable name = name of the variable that stores two values</strong></p><br>
+							<img src="images/ekran 7.png" alt="Example Image"/>
+							<p>In this way, the first variable will start storing the first value created earlier, while the second variable will store the second value.</p>
+							<h3>Variable Naming Rules</h3>
+							<p>There are some important points to consider when naming variables. The three most common naming styles are as follows:</p>
+							<h4>1-Camel Case</h4>
+							<p>The first letter of the first word is lowercase, while the first letters of the following words are capitalized. For example: variableName. Although this naming style is not common in Python, it may be preferred in some projects.</p>
+							<h4>2-Pascal Case</h4>
+							<p>The first letters of all words are capitalized. For example: VariableName.</p>
+							<h4>3-Snake Case</h4>
+							<p>An underscore (_) is placed between words. For example: variable_name.</p>
+							<br><p>Variable names you should avoid:</p><br>
+							<p class="avoid-item">&bull; <strong>Starting with a number:</strong> 1variableName.</p>
+							<p class="avoid-item">&bull; <strong>Using symbols:</strong> Only an underscore (_) is allowed in variable names. For example, symbols such as variable-name are not valid.</p>
+							<p>At the same time, in Python, you can print multiple variables together using the print ( ) command. For this, you can use the + operator (or “ ,” ).</p>
+							<img src="images/ekran 8.png" alt="Example Image"/>
+							<h2>DATA TYPES IN PYTHON</h2>
+							<h3>A-Numeric Data Types</h3>
+							<h4>1- Integers</h4>
+							<p>Positive or negative whole numbers. For example: 1, -3, 101.</p>
+							<h4>2- Float</h4>
+							<p>Decimal numbers. For example: 3.17, -0.00001, 28.453.</p>
+							<h4>3- Complex</h4>
+							<p>Imaginary numbers. For example: 3 + 5j (here, 'j' represents an imaginary unit).</p>
+							<img src="images/ekran 9.png" alt="Example Image"/>
+							<h3>B- Boolean Data Types</h3>
+							<h4>1- True</h4>
+							<p>Represents a true value.</p>
+							<h4>2- False</h4>
+							<p>Represents a false value.</p>
+							<img src="images/ekran 10.png" alt="Example Image"/>
+							<h3>C- Sequence Data Types</h3>
+							<h4>1- Strings</h4>
+							<p>There are three types of strings: single quote, double quote, and triple quote. Single quote: ' ' – Double quote: " " – Triple quote: """ """</p>
+							<p><br>If a single quote is used within a string, the string should be written using double quotes. For example: "Türkiye’nin". Similarly, if a double quote is used within a string, it should be written using single quotes: 'Ali "yemek çok güzel olmuş" dedi'. Triple quotes are used for multi-line texts and can contain all types of quotation marks.</p>
+							<img src="images/ekran 11.png" alt="Example Image"/>
+							<p class="note"><em>Note: Strings are indexable, meaning you can access individual characters in a string using their index positions.</em></p>
+							<img src="images/ekran 12.png" alt="Example Image"/>
+							<h3>2- Lists</h3>
+							<p>Lists are data structures that store multiple values in an ordered and mutable manner. Elements within a list can be of different data types (such as string, integer, or float). Additionally, a list can contain another list, allowing the creation of nested lists.<br><br>Square brackets [ ] are used to create a list.</p>
+							<img src="images/ekran 13.png" alt="List example"/>
+							<p class="note"><em>Note: Lists are indexable → Each element has a position number and can be accessed using its index.</em></p>
+							<img src="images/ekran 14.png" alt="List indexing example"/>
+							<p class="note"><em>Note: Lists are mutable → The contents of a list can be modified or updated after creation.</em></p>
+							<img src="images/ekran 15.png" alt="List mutability example"/>
+							<h3>3- Tuples</h3>
+							<p>Tuples are similar to lists but are immutable ( ), meaning their contents cannot be modified once created. Tuples are defined using parentheses ( ).</p>
+							<p class="note"><em>Note: Tuples are indexable → This means you can access their elements using index numbers.</em></p>
+							<img src="images/ekran 16.png" alt="Tuple indexing example"/>
+							<p class="note"><em>However, the contents of a tuple cannot be changed or updated after creation.</em></p>
+							<img src="images/ekran 17.png" alt="Tuple immutability example"/>
+							<h3>4- Sets</h3>
+							<p>Sets are data structures similar to lists and tuples, but they do not allow duplicate elements. In other words, a set cannot contain the same element more than once.</p>
+							<p><br>Sets are created using curly braces { }.</p>
+							<p class="note"><em>Sets are not indexable → This means you cannot access elements in a specific order.</em></p>
+							<p class="note"><em>Elements in a set cannot be modified using index numbers.</em></p>
+							<p class="note"><em>However, new elements can be added to a set, and existing elements can be removed.</em></p>
+							<img src="images/ekran 18.png" alt="Set operations example"/>
+							<h3>5- Dictionaries</h3>
+							<p>Dictionaries are data structures composed of key — value pairs. Like lists, they store data, but each value is identified by its unique key.</p>
+							<p><br>When creating a dictionary, curly braces { } are used and each key is separated from its value by a colon :</p>
+							<img src="images/ekran 19.png" alt="Example Image"/>
+							<p class="note"><em>Dictionaries are indexable but in a different way → To access a value, you use its key instead of an index number.</em></p>
+							<img src="images/ekran 20.png" alt="Example Image"/>
+							<p class="note"><em>Values in a dictionary can be modified → You can update or change the content of a dictionary.</em></p>
+							<img src="images/ekran 21.png" alt="Example Image"/>
+							<p>Now you have a solid understanding of variables and data types in Python, the building blocks for any Python project!</p>
+				</section>
+
+				<!-- Main -->
+					<div id="main" class="main-content"></div>
+
+				<!-- Footer -->
+                            <footer id="footer">
+                                <div class="inner">
+                                    <ul class="icons">
+                                        <li>
+                                            <a href="https://github.com/00tugbayldrm00" target="_blank" class="social-icon github">
+                                                <span class="icon">&#xf09b;</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.linkedin.com/in/tu%C4%9Fba-y%C4%B1ld%C4%B1r%C4%B1m-27b9232b9/" target="_blank" class="social-icon linkedin">
+                                                <span class="icon">&#xf08c;</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+	                                <ul class="copyright">
+								        <li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+							        </ul>
+                                </div>
+                            </footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
