@@ -4954,3 +4954,22 @@ body.tutorial-page footer.conditions-footer {
 body.tutorial-page footer.formatting-footer {
     margin-top: 2750px !important; 
 }
+
+/*tel için*/
+@media (max-width: 768px) {
+  nav {
+    width: 100%;
+    overflow-x: auto; 
+  }
+  nav ul {
+    flex-wrap: wrap; 
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-header h1 {
+    font-size: 1.5rem; /* daha küçük yap */
+    text-align: center; /* ortaya al */
+    overflow: visible;
+  }
+}
