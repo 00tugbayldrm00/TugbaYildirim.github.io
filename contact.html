@@ -37,60 +37,91 @@
   				</header>
 
 				<!-- Contact -->
-					<section id="contact">
-						<div class="inner">
-							<section>
-								<form method="post" action="send_email.php">
-									<div class="contact-intro">
-  										<h2>Let’s get in touch!</h2>
-  										<p>Feel free to reach out for opportunities, collaborations, or any questions.</p>
-						</div>
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="6"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Clear" /></li>
-									</ul>
-								</form>
-							</section>
-							<section class="split">
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-envelope"></span>
-										<h3>Email</h3>
-										<p>00tugbayldrm00@gmail.com</p>
-									</div>
-								</section>
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-phone"></span>
-										<h3>Phone</h3>
-										<span>(+90) 535 722 8099</span>
-									</div>
-								</section>
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-home"></span>
-										<h3>Address</h3>
-										<span>Beylikdüzü, Istanbul, Turkey</span>
-									</div>
-								</section>
-							</section>
-						</div>
-					</section>
+<section id="contact">
+    <div class="inner">
+        <section>
+            <form id="contact-form" method="POST" action="https://formspree.io/f/xeejknqn">
+                <div class="contact-intro">
+                    <h2>Let’s get in touch!</h2>
+                    <p>Feel free to reach out for opportunities, collaborations, or any questions.</p>
+                </div>
+                <div class="fields">
+                    <div class="field half">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" required />
+                    </div>
+                    <div class="field half">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" required />
+                    </div>
+                    <div class="field">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" rows="6" required></textarea>
+                    </div>
+                </div>
+                <ul class="actions">
+                    <li><input type="submit" value="Send Message" class="primary" /></li>
+                    <li><input type="reset" value="Clear" /></li>
+                </ul>
+            </form>
+            <!-- Thank you message -->
+            <div id="thank-you-message" style="display:none; margin-top:20px; font-weight:bold; color:green;">
+                Thank you for your message! I will get back to you as soon as possible.
+            </div>
+        </section>
+        <section class="split">
+            <section>
+                <div class="contact-method">
+                    <span class="icon solid alt fa-envelope"></span>
+                    <h3>Email</h3>
+                    <p>00tugbayldrm00@gmail.com</p>
+                </div>
+            </section>
+            <section>
+                <div class="contact-method">
+                    <span class="icon solid alt fa-phone"></span>
+                    <h3>Phone</h3>
+                    <span>(+90) 535 722 8099</span>
+                </div>
+            </section>
+            <section>
+                <div class="contact-method">
+                    <span class="icon solid alt fa-home"></span>
+                    <h3>Address</h3>
+                    <span>Beylikdüzü, Istanbul, Turkey</span>
+                </div>
+            </section>
+        </section>
+    </div>
+</section>
 
+<!-- JavaScript to show thank you message after submit -->
+<script>
+    const form = document.getElementById('contact-form');
+    const thankYou = document.getElementById('thank-you-message');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const formData = new FormData(form);
+
+        fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: { 'Accept': 'application/json' }
+        })
+        .then(response => {
+            if (response.ok) {
+                form.style.display = 'none';
+                thankYou.style.display = 'block';
+            } else {
+                alert('Oops! Something went wrong. Please try again.');
+            }
+        })
+        .catch(error => {
+            alert('Oops! Something went wrong. Please try again.');
+        });
+    });
+</script>
                
 		<!-- Footer -->
 			<footer id="footer">
