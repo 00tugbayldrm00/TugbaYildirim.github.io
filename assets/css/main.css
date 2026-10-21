@@ -4955,7 +4955,7 @@ body.tutorial-page footer.formatting-footer {
     margin-top: 2750px !important; 
 }
 
-/* Mobilde Kesilmeyi Sıfırlayan ve Sol-Sağ Boşluğu Garantileyen Kural */
+/* Mobilde Kesilmeyi Sıfırlayan ve İçerikle Arasını Açan Tam Kod */
 @media screen and (max-width: 768px) {
 
   /* Banner yüksekliğini kısıtlıyoruz */
@@ -4963,10 +4963,10 @@ body.tutorial-page footer.formatting-footer {
     min-height: auto !important;
     height: auto !important;
     max-height: none !important;
-    padding: 3.5em 1.5em 2em 1.5em !important;
+    padding: 2.5em 1.5em 2em 1.5em !important;
   }
 
-  /* Header düzeni */
+  /* Header düzeni ve altındaki içerikle ferah mesafe */
   #header, body.is-mobile #header {
     position: relative !important;
     top: 0 !important;
@@ -4980,8 +4980,9 @@ body.tutorial-page footer.formatting-footer {
     flex-direction: column !important;
     align-items: center !important;
     padding: 10px 0 !important;
+    margin-bottom: 25px !important; /* Çizgi ile I am Tuğba yazısının arasını açan sihirli dokunuş */
     z-index: 1000 !important;
-    overflow-x: hidden !important; /* Ekran dışına taşmayı tamamen engeller */
+    overflow-x: hidden !important;
   }
 
   #header .logo {
@@ -4989,7 +4990,7 @@ body.tutorial-page footer.formatting-footer {
     margin: 0 0 10px 0 !important;
   }
 
-  /* Nav kapsayıcısını tamamen sıfırlayıp ekran genişliğine sabitliyoruz */
+  /* Nav kapsayıcısını sıfırlayıp ekran genişliğine sabitliyoruz */
   #top-menu, nav#top-menu {
     position: relative !important;
     width: 100% !important;
@@ -5002,7 +5003,7 @@ body.tutorial-page footer.formatting-footer {
     transform: none !important;
   }
 
-  /* KESİN SIFIRLAMA: Ekran dışına kaymayı engelleyen kaydırılabilir liste */
+  /* Ekran dışına kaymayı engelleip HOME ile başlayan kaydırılabilir liste */
   #top-menu ul {
     display: flex !important;
     flex-direction: row !important;
@@ -5013,7 +5014,7 @@ body.tutorial-page footer.formatting-footer {
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 !important;
-    padding: 0 25px !important; /* Sol ve sağa bolca nefes payı koyar */
+    padding: 0 25px !important;
     box-sizing: border-box !important;
     list-style: none !important;
     transform: none !important;
@@ -5029,7 +5030,7 @@ body.tutorial-page footer.formatting-footer {
   }
 
   #top-menu ul li:first-child {
-    margin-left: 0 !important; /* En baştaki HOME'un solunu sıfırlar */
+    margin-left: 0 !important;
   }
 
   #top-menu ul li a {
@@ -5043,7 +5044,4 @@ body.tutorial-page footer.formatting-footer {
   }
 }
 
-/* Banner ile menü arasını biraz açıp ferahlık veriyoruz */
-  #banner, section.banner, .banner, body.is-mobile #banner {
-    padding-top: 3em !important; /* Üstten boşluğu biraz artırır */
-  }
+
