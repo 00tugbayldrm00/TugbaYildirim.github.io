@@ -5064,19 +5064,48 @@ body.tutorial-page footer.formatting-footer {
   }
 }
 
-/* About Me başlığını ve altındaki çizgiyi mermi gibi ortala */
-  #banner header.major, 
-  section.banner header.major, 
+/* 1. ABOUT ME SAYFASI: Başlığı ve çizgiyi MUTLAKA tam ortala */
+  body.is-preload header.major,
+  .inner header.major,
   header.major {
     text-align: center !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+
+  header.major h1, 
+  header.major h2, 
+  header.major h3 {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 
   header.major::after {
+    display: block !important;
     position: relative !important;
-    left: 50% !important;
-    right: auto !important;
-    transform: translateX(-50%) !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 4rem !important; /* Çizginin uzunluğu */
+    margin: 1em auto 0 auto !important; /* Otomatik margin ile tam ortaya çiviler */
+    transform: none !important;
+  }
+
+  /* 2. HOME SAYFASI: Başlığı altındaki uzun yazı ile sol hizada kusursuz buluştur */
+  #banner header.major, 
+  section.banner header.major {
+    text-align: left !important;
+  }
+
+  #banner header.major h1,
+  #banner header.major h2 {
+    text-align: left !important;
     margin-left: 0 !important;
-    margin-right: 0 !important;
-    margin-top: 0.8em !important;
+  }
+
+  #banner header.major::after {
+    left: 0 !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    transform: none !important;
   }
