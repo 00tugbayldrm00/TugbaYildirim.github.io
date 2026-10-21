@@ -4955,46 +4955,65 @@ body.tutorial-page footer.formatting-footer {
     margin-top: 2750px !important; 
 }
 
-/* Forty Teması İçin Tam Ezici Mobil Menü */
+/* Mobilde Masaüstünü Bozmadan Menüyü Alt Alta Düzenleme */
 @media screen and (max-width: 768px) {
+  
+  /* Header alanını mobilde esnetip elemanları merkeze alıyoruz */
   #header {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     height: auto !important;
-    min-height: 80px !important;
-    padding: 10px !important;
+    padding: 12px 5px !important;
   }
 
-  #header .logo, #header a.logo {
-    position: relative !important;
-    top: 0 !important;
-    left: 0 !important;
-    margin: 0 0 8px 0 !important;
-    display: block !important;
+  /* Logoyu en üste yerleştiriyoruz */
+  #header .logo {
+    position: static !important;
+    margin: 0 0 10px 0 !important;
   }
 
-  #header nav, #header nav.links, #header .links, nav#nav {
-    position: relative !important;
-    right: 0 !important;
-    top: 0 !important;
-    display: flex !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
+  /* id="top-menu" olan nav alanını mobilde genişletiyoruz */
+  #top-menu {
+    position: static !important;
     width: 100% !important;
     margin: 0 !important;
   }
 
-  #header nav a, #header nav.links a, #header .links a, nav#nav a {
-    position: relative !important;
-    display: inline-block !important;
-    font-size: 0.75rem !important;
-    padding: 4px 8px !important;
+  /* UL liste yapısını mobilde yan yana değil alt alta yapıyoruz */
+  #top-menu ul {
+    display: flex !important;
+    flex-direction: column !important; /* Alt alta dizer */
+    align-items: center !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    list-style: none !important;
+  }
+
+  /* LI liste elemanlarının kenar boşluklarını sıfırlıyoruz */
+  #top-menu ul li {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    padding: 0 !important;
+    margin: 3px 0 !important;
+  }
+
+  /* Linklerin yazılarını net, okunaklı ve dokunulabilir yapıyoruz */
+  #top-menu ul li a {
+    display: block !important;
     color: #ffffff !important;
-    border: none !important;
-    white-space: nowrap !important;
+    font-size: 0.85rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 1px !important;
+    padding: 6px 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important; /* Şık ince çizgi */
+  }
+
+  #top-menu ul li:last-child a {
+    border-bottom: none !important;
   }
 }
-
 
 
