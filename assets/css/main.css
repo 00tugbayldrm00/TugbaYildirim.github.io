@@ -5064,53 +5064,58 @@ body.tutorial-page footer.formatting-footer {
   }
 }
 
-/* 1. ABOUT ME SAYFASI: Başlığı ve çizgiyi KESİN KESİN tam ortala */
-  #main > .inner > header.major,
-  .inner > header.major {
-    text-align: center !important;
-    width: 100% !important;
-  }
-
-  #main > .inner > header.major h1,
-  #main > .inner > header.major h2,
-  .inner > header.major h1,
-  .inner > header.major h2 {
+/* ABOUT ME (GENERIC) SAYFASINDAKİ BAŞLIK VE ÇİZGİYİ TAM ORTALA */
+  #main .inner header.major,
+  #main.alt .inner header.major,
+  body #main header.major,
+  .inner header.major {
     text-align: center !important;
     width: 100% !important;
     margin-left: auto !important;
     margin-right: auto !important;
+    padding-left: 0 !important;
   }
 
-  #main > .inner > header.major::after,
-  .inner > header.major::after {
-    position: relative !important;
+  #main .inner header.major h1,
+  #main.alt .inner header.major h1,
+  #main header.major h1,
+  .inner header.major h1 {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
     display: block !important;
-    left: auto !important;
-    right: auto !important;
-    float: none !important;
-    margin: 1em auto 0 auto !important;
-    transform: none !important;
-  }
-
-  /* 2. HOME SAYFASI: Başlığı ve çizgiyi KESİN KESİN sola dayalı yap */
-  #banner header.major, 
-  section.banner header.major {
-    text-align: left !important;
     width: 100% !important;
   }
 
-  #banner header.major h1,
-  #banner header.major h2 {
-    text-align: left !important;
-    margin-left: 0 !important;
+  /* Altındaki beyaz çizgiyi tam ortala */
+  #main .inner header.major::after,
+  #main.alt .inner header.major::after,
+  #main header.major::after,
+  .inner header.major::after {
+    content: '' !important;
+    display: block !important;
+    position: relative !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin: 1em auto 0 auto !important; /* Ortalar */
+    transform: none !important;
+    float: none !important;
   }
 
-  #banner header.major::after {
+  /* MENÜNÜN SAĞA KAYDIĞINI ANLATTIRAN İPUCU KURALI */
+  #top-menu, nav#top-menu {
     position: relative !important;
-    display: block !important;
-    left: 0 !important;
-    float: none !important;
-    margin-left: 0 !important;
-    margin-right: auto !important;
-    transform: none !important;
+  }
+
+  /* Menünün sağ kenarına tatlı bir gölgeli kaydırma ipucu */
+  #top-menu::after {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    width: 25px !important;
+    height: 100% !important;
+    background: linear-gradient(to right, rgba(36, 41, 67, 0), rgba(36, 41, 67, 0.9)) !important;
+    pointer-events: none !important;
+    z-index: 10 !important;
   }
