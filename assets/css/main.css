@@ -4981,28 +4981,51 @@ body.tutorial-page footer.formatting-footer {
     margin-bottom: 8px !important;
   }
 
-  /* Menü linklerini logonun altına alıp yan yana kaydırılabilir yapıyoruz */
-  #header nav, nav {
-    position: relative !important;
-    right: 0 !important;
-    top: 0 !important;
+/* Masaüstüne Dokunmadan Sadece Mobilde Açılır Menü Yapısı */
+@media screen and (max-width: 768px) {
+  
+  /* Header düzeni: Logo solda, Menü sağda */
+  #header {
     display: flex !important;
-    flex-wrap: nowrap !important;
-    overflow-x: auto !important;
-    width: 100% !important;
-    justify-content: center !important;
-    padding: 5px 10px !important;
-    -webkit-overflow-scrolling: touch;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 10px 15px !important;
+    height: 60px !important;
   }
 
-  /* Linklerin renklerini ve boyutlarını görünür yapıyoruz */
+  /* Logoyu sol köşeye sabitliyoruz */
+  #header .logo {
+    position: static !important;
+    margin: 0 !important;
+  }
+
+  /* Linklerin bulunduğu nav alanını mobilde dikey bir açılır menüye dönüştürüyoruz */
+  #header nav, nav {
+    position: absolute !important;
+    top: 60px !important;
+    right: 10px !important;
+    background-color: #242943 !important; /* Forty temasının şık koyu lacivert tonu */
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 8px !important;
+    flex-direction: column !important;
+    padding: 10px 15px !important;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.4) !important;
+    z-index: 9999 !important;
+  }
+
+  /* Linklerin alt alta jilet gibi sıralanması */
   #header nav a, nav a {
+    display: block !important;
     color: #ffffff !important;
-    font-size: 0.8rem !important;
-    font-weight: 600 !important;
-    padding: 4px 10px !important;
+    padding: 8px 12px !important;
+    font-size: 0.85rem !important;
+    text-align: left !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
     white-space: nowrap !important;
-    opacity: 1 !important;
+  }
+
+  #header nav a:last-child, nav a:last-child {
+    border-bottom: none !important;
   }
 }
 
