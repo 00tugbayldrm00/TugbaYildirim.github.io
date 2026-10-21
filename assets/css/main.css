@@ -4955,30 +4955,54 @@ body.tutorial-page footer.formatting-footer {
     margin-top: 2750px !important; 
 }
 
-/*tel için*/
-
-@media (max-width: 768px) {
-  .portfolio-header h1 {
-    font-size: 1.5rem; /* daha küçük yap */
-    text-align: center; /* ortaya al */
-    overflow: visible;
-  }
-}
-
-/* Mobil Menü Düzenleme */
+/* Mobil Menü Konum ve Renk Düzenlemesi */
 @media screen and (max-width: 768px) {
-  #header nav, nav {
+  /* Header kapsayıcısını esnek yapıp elemanları alt alta/düzgün dizeriz */
+  #header {
     display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    height: auto !important;
+    padding: 10px 0 !important;
+  }
+
+  /* Başlık stilini koruyoruz */
+  .portfolio-header h1 {
+    font-size: 1.5rem !important;
+    text-align: center !important;
+    overflow: visible !important;
+  }
+
+  /* Logoyu üstte merkeze alıyoruz */
+  #header .logo {
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+    margin-bottom: 8px !important;
+  }
+
+  /* Menü linklerini logonun altına alıp yan yana kaydırılabilir yapıyoruz */
+  #header nav, nav {
+    position: relative !important;
+    right: 0 !important;
+    top: 0 !important;
+    display: flex !important;
+    flex-wrap: nowrap !important;
     overflow-x: auto !important;
-    white-space: nowrap !important;
-    max-width: 100% !important;
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 5px 10px !important;
     -webkit-overflow-scrolling: touch;
   }
 
+  /* Linklerin renklerini ve boyutlarını görünür yapıyoruz */
   #header nav a, nav a {
-    font-size: 0.75rem !important;
-    padding: 0 0.4rem !important;
-    display: inline-block !important;
+    color: #ffffff !important;
+    font-size: 0.8rem !important;
+    font-weight: 600 !important;
+    padding: 4px 10px !important;
+    white-space: nowrap !important;
+    opacity: 1 !important;
   }
 }
 
