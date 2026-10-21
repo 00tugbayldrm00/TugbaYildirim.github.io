@@ -4955,6 +4955,26 @@ body.tutorial-page footer.formatting-footer {
     margin-top: 2750px !important; 
 }
 
+/*tel için*/
+@media (max-width: 768px) {
+  nav {
+    width: 100%;
+    overflow-x: auto; 
+  }
+  nav ul {
+    flex-wrap: wrap; 
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-header h1 {
+    font-size: 1.5rem; /* daha küçük yap */
+    text-align: center; /* ortaya al */
+    overflow: visible;
+  }
+}
+
+
 /* Mobilde Kesilmeyi Sıfırlayan ve İçerikle Arasını Açan Tam Kod */
 @media screen and (max-width: 768px) {
 
@@ -5044,14 +5064,19 @@ body.tutorial-page footer.formatting-footer {
   }
 }
 
-/* Generic ve Landing sayfalarındaki başlıkları ve altındaki çizgiyi tam ortala */
+/* About Me başlığını ve altındaki çizgiyi mermi gibi ortala */
+  #banner header.major, 
+  section.banner header.major, 
   header.major {
     text-align: center !important;
   }
 
   header.major::after {
-    left: 0 !important;
-    right: 0 !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    position: relative !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0.8em !important;
   }
