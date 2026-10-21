@@ -4955,64 +4955,62 @@ body.tutorial-page footer.formatting-footer {
     margin-top: 2750px !important; 
 }
 
-/* Mobilde Masaüstünü Bozmadan Menüyü Alt Alta Düzenleme */
+/* Mobilde Ekranı Kaplamayan Kibar Üst Menü */
 @media screen and (max-width: 768px) {
   
-  /* Header alanını mobilde esnetip elemanları merkeze alıyoruz */
+  /* Header ekranı kaplamasın, sadece en üstte sabit dursun */
   #header {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     height: auto !important;
-    padding: 12px 5px !important;
+    min-height: initial !important;
+    max-height: none !important;
+    position: relative !important; /* Ekranı bloklamaması için relative yaptık */
+    padding: 10px 5px !important;
+    background: #242943 !important; /* Arka planı koyu yapıp gövdeden ayırıyoruz */
   }
 
-  /* Logoyu en üste yerleştiriyoruz */
+  /* Logoyu üste alıyoruz */
   #header .logo {
     position: static !important;
-    margin: 0 0 10px 0 !important;
+    margin-bottom: 6px !important;
   }
 
-  /* id="top-menu" olan nav alanını mobilde genişletiyoruz */
   #top-menu {
     position: static !important;
     width: 100% !important;
-    margin: 0 !important;
   }
 
-  /* UL liste yapısını mobilde yan yana değil alt alta yapıyoruz */
+  /* Menü linklerini yan yana, sığmazsa kaydırılabilir yapıyoruz */
   #top-menu ul {
     display: flex !important;
-    flex-direction: column !important; /* Alt alta dizer */
-    align-items: center !important;
+    flex-direction: row !important; /* Yan yana sırala */
+    flex-wrap: nowrap !important;
+    justify-content: center !important;
+    overflow-x: auto !important; /* Sağa sola parmakla kaysın */
     width: 100% !important;
-    padding: 0 !important;
+    padding: 0 5px !important;
     margin: 0 !important;
     list-style: none !important;
+    -webkit-overflow-scrolling: touch;
   }
 
-  /* LI liste elemanlarının kenar boşluklarını sıfırlıyoruz */
   #top-menu ul li {
-    display: block !important;
-    width: 100% !important;
-    text-align: center !important;
+    display: inline-block !important;
+    flex: 0 0 auto !important;
+    margin: 0 4px !important;
     padding: 0 !important;
-    margin: 3px 0 !important;
   }
 
-  /* Linklerin yazılarını net, okunaklı ve dokunulabilir yapıyoruz */
   #top-menu ul li a {
-    display: block !important;
+    display: inline-block !important;
     color: #ffffff !important;
-    font-size: 0.85rem !important;
+    font-size: 0.75rem !important;
     font-weight: 600 !important;
-    letter-spacing: 1px !important;
-    padding: 6px 0 !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important; /* Şık ince çizgi */
-  }
-
-  #top-menu ul li:last-child a {
-    border-bottom: none !important;
+    padding: 4px 8px !important;
+    border: none !important;
+    white-space: nowrap !important;
   }
 }
 
