@@ -5044,4 +5044,14 @@ body.tutorial-page footer.formatting-footer {
   }
 }
 
+/* Generic ve Landing sayfalarındaki başlıkları ve altındaki çizgiyi tam ortala */
+  header.major {
+    text-align: center !important;
+  }
 
+  header.major::after {
+    left: 0 !important;
+    right: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
