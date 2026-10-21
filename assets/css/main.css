@@ -4955,36 +4955,43 @@ body.tutorial-page footer.formatting-footer {
     margin-top: 2750px !important; 
 }
 
-/* Mobilde Banner Yüksekliğini ve Menü Çakışmasını Çözen Kod */
+/* Mobilde JS Baskısını ve Banner/Header Çakışmasını Sıfırlayan Kod */
 @media screen and (max-width: 768px) {
-  
-  /* 1. Ekranı kaplayan Mavi Banner alanının yüksekliğini sınırlıyoruz */
-  #banner, section.banner, .banner {
+
+  /* 1. Ekranı kaplayan dev Mavi Banner'ın boyunu kırpıyoruz */
+  #banner, section.banner, .banner, body.is-mobile #banner {
     min-height: auto !important;
     height: auto !important;
-    padding: 3em 1.5em 2em 1.5em !important;
+    max-height: none !important;
+    padding: 4em 1.5em 2em 1.5em !important;
   }
 
-  /* 2. Header alanını derleyip topluyoruz */
-  #header {
+  /* 2. Header'ı ekranı bloklamayacak şekilde yukarı sabitliyoruz */
+  #header, body.is-mobile #header {
     position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: initial !important;
+    background: #242943 !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    height: auto !important;
-    min-height: initial !important;
     padding: 10px 5px !important;
+    z-index: 1000 !important;
   }
 
   #header .logo {
     position: static !important;
-    margin-bottom: 8px !important;
+    margin: 0 0 8px 0 !important;
   }
 
-  /* 3. Menü linklerini üstte derli toplu kaydırılabilir dikey/yatay yapıyoruz */
-  #top-menu {
+  /* 3. Menü linklerini ekranın ortasında derli toplu sıralıyoruz */
+  #top-menu, nav#top-menu {
     position: static !important;
     width: 100% !important;
+    display: block !important;
   }
 
   #top-menu ul {
@@ -4994,7 +5001,7 @@ body.tutorial-page footer.formatting-footer {
     justify-content: center !important;
     overflow-x: auto !important;
     width: 100% !important;
-    padding: 0 5px !important;
+    padding: 0 !important;
     margin: 0 !important;
     list-style: none !important;
     -webkit-overflow-scrolling: touch;
@@ -5011,7 +5018,7 @@ body.tutorial-page footer.formatting-footer {
     color: #ffffff !important;
     font-size: 0.75rem !important;
     font-weight: 600 !important;
-    padding: 4px 6px !important;
+    padding: 5px 8px !important;
     border: none !important;
     white-space: nowrap !important;
   }
