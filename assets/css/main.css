@@ -4956,15 +4956,6 @@ body.tutorial-page footer.formatting-footer {
 }
 
 /*tel için*/
-@media (max-width: 768px) {
-  nav {
-    width: 100%;
-    overflow-x: auto; 
-  }
-  nav ul {
-    flex-wrap: wrap; 
-  }
-}
 
 @media (max-width: 768px) {
   .portfolio-header h1 {
@@ -4974,19 +4965,20 @@ body.tutorial-page footer.formatting-footer {
   }
 }
 
-/* Mobil Ekranlar İçin (768px ve altı) */
+/* Mobil Menü Düzenleme */
 @media screen and (max-width: 768px) {
-  nav, .nav, #nav, header ul { 
+  #header nav, nav {
     display: flex !important;
-    flex-direction: column !important; /* Menü elemanlarını alt alta dizer */
-    align-items: center !important;
-    padding: 10px 0 !important;
+    overflow-x: auto !important;
+    white-space: nowrap !important;
+    max-width: 100% !important;
+    -webkit-overflow-scrolling: touch;
   }
 
-  nav a, header a {
-    margin: 5px 0 !important; /* Linkler arasına dokunma mesafesi koyar */
-    font-size: 14px !important;
+  #header nav a, nav a {
+    font-size: 0.75rem !important;
+    padding: 0 0.4rem !important;
+    display: inline-block !important;
   }
 }
-
 
