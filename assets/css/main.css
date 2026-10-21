@@ -4973,3 +4973,20 @@ body.tutorial-page footer.formatting-footer {
     overflow: visible;
   }
 }
+
+/* Mobil Ekranlar İçin (768px ve altı) */
+@media screen and (max-width: 768px) {
+  nav, .nav, #nav, header ul { 
+    display: flex !important;
+    flex-direction: column !important; /* Menü elemanlarını alt alta dizer */
+    align-items: center !important;
+    padding: 10px 0 !important;
+  }
+
+  nav a, header a {
+    margin: 5px 0 !important; /* Linkler arasına dokunma mesafesi koyar */
+    font-size: 14px !important;
+  }
+}
+
+
