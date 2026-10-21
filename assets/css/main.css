@@ -4955,26 +4955,6 @@ body.tutorial-page footer.formatting-footer {
     margin-top: 2750px !important; 
 }
 
-/*tel için*/
-@media (max-width: 768px) {
-  nav {
-    width: 100%;
-    overflow-x: auto; 
-  }
-  nav ul {
-    flex-wrap: wrap; 
-  }
-}
-
-@media (max-width: 768px) {
-  .portfolio-header h1 {
-    font-size: 1.5rem; /* daha küçük yap */
-    text-align: center; /* ortaya al */
-    overflow: visible;
-  }
-}
-
-
 /* Mobilde Kesilmeyi Sıfırlayan ve İçerikle Arasını Açan Tam Kod */
 @media screen and (max-width: 768px) {
 
@@ -5064,58 +5044,59 @@ body.tutorial-page footer.formatting-footer {
   }
 }
 
-/* ABOUT ME (GENERIC) SAYFASINDAKİ BAŞLIK VE ÇİZGİYİ TAM ORTALA */
-  #main .inner header.major,
-  #main.alt .inner header.major,
-  body #main header.major,
-  .inner header.major {
-    text-align: center !important;
-    width: 100% !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+/* 1. HOME SAYFASI BANNER BAŞLIĞINI TAM SOLA HİZALA (Paragraf ile sıfır hıza) */
+  #banner .inner header.major,
+  #banner header.major,
+  section.banner .inner header.major {
+    text-align: left !important;
+    align-items: flex-start !important;
+    margin-left: 0 !important;
     padding-left: 0 !important;
   }
 
+  #banner .inner header.major h1,
+  #banner .inner header.major h2,
+  #banner header.major h1,
+  #banner header.major h2 {
+    text-align: left !important;
+    margin-left: 0 !important;
+  }
+
+  #banner .inner header.major::after,
+  #banner header.major::after {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    left: 0 !important;
+  }
+
+  /* 2. ABOUT ME SAYFASI BAŞLIĞINI VE ÇİZGİSİNİ TAM ORTALA */
+  #main .inner header.major,
+  .body #main .inner header.major,
+  #main header.major,
+  .inner header.major {
+    text-align: center !important;
+    align-items: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
   #main .inner header.major h1,
-  #main.alt .inner header.major h1,
+  #main .inner header.major h2,
   #main header.major h1,
+  #main header.major h2,
   .inner header.major h1 {
     text-align: center !important;
     margin-left: auto !important;
     margin-right: auto !important;
-    display: block !important;
-    width: 100% !important;
   }
 
-  /* Altındaki beyaz çizgiyi tam ortala */
   #main .inner header.major::after,
-  #main.alt .inner header.major::after,
   #main header.major::after,
   .inner header.major::after {
-    content: '' !important;
-    display: block !important;
-    position: relative !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
     left: 0 !important;
     right: 0 !important;
-    margin: 1em auto 0 auto !important; /* Ortalar */
-    transform: none !important;
-    float: none !important;
   }
 
-  /* MENÜNÜN SAĞA KAYDIĞINI ANLATTIRAN İPUCU KURALI */
-  #top-menu, nav#top-menu {
-    position: relative !important;
-  }
 
-  /* Menünün sağ kenarına tatlı bir gölgeli kaydırma ipucu */
-  #top-menu::after {
-    content: '' !important;
-    position: absolute !important;
-    top: 0 !important;
-    right: 0 !important;
-    width: 25px !important;
-    height: 100% !important;
-    background: linear-gradient(to right, rgba(36, 41, 67, 0), rgba(36, 41, 67, 0.9)) !important;
-    pointer-events: none !important;
-    z-index: 10 !important;
-  }
