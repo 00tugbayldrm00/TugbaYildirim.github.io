@@ -5043,4 +5043,7 @@ body.tutorial-page footer.formatting-footer {
   }
 }
 
-
+/* Menü ile altındaki içerik arasına tatlı bir boşluk */
+  #top-menu {
+    margin-bottom: 12px !important;
+  }
